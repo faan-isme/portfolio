@@ -90,8 +90,8 @@
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
                     </li>
                     <li>
-                        <a href="#contact"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        <a href="#certificate"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Certificate</a>
                     </li>
                 </ul>
             </div>
@@ -207,15 +207,32 @@
                             dibagun menggunakan Laravel dan Tailwind.
                         </p>
                         <div class="flex space-x-5 p-2 m-1 sm:mt-0">
-                            <a href="#">
+                            <a href="https://laravel.com/" data-tooltip-target="tooltip-laravel-1">
                                 <img src="assets/icn/laravel.png" alt="Laravel" class="w-8 h-8">
                             </a>
-                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <div id="tooltip-laravel-1" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                Laravel
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <a href="https://tailwindcss.com/" data-tooltip-target="tooltip-tailwind-1">
                                 <img src="assets/icn/tailwind.png" alt="Tailwind" class="w-8 h-8">
                             </a>
-                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <div id="tooltip-tailwind-1" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                Tailwind
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <a href="https://www.mysql.com/" data-tooltip-target="tooltip-mysql-1">
                                 <img src="assets/icn/mysql.png" alt="MySQL" class="w-8 h-8">
                             </a>
+                            <div id="tooltip-mysql-1" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                MySQL
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
                         </div>
                         <a class="icon-link text-blue-500 hover:text-blue-700" style="text-decoration: none;"
                             href="https://chargepoint.my.id" target="_blank">
@@ -229,9 +246,7 @@
                         class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
                         <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
                             <img src="assets/img/chargepoint.png"
-                                class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
-                            <!-- <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png"
-                                class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt=""> -->
+                                class="h-[156px] md:h-[278px] w-full rounded-lg" alt="Cahrgepoint">
                         </div>
                     </div>
                     <div
@@ -297,9 +312,7 @@
                         class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
                         <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
                             <img src="assets/img/tokoNusantara.png"
-                                class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
-                            <!-- <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png"
-                                class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt=""> -->
+                                class=" h-[156px] md:h-[278px] w-full rounded-lg" alt="Toko Nusantara">
                         </div>
                     </div>
                     <div
@@ -315,31 +328,78 @@
 
         </div>
     </section>
+    <span id="certificate"></span>
+    <section class="reveal">
+        <br><br><br>
+        <div class="flex max-w-screen-lg mx-auto p-4 justify-center">
+            <h1 class="font-semibold text-2xl ">CERTIFICATE</h1>
+        </div>
+        <div class="animate__animated animate__slideInUp max-w-screen-lg mx-auto p-4 flex flex-wrap md:justify-between">
+            <div
+                class="myanimation md:w-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:ms-2 md:me-2 mt-5">
+                <a href="/assets/FATHIN ANHAR WICAKSONO - Sertifikat Penyelesaian SIB Batch 5 LearningX.pdf"
+                    target="_blank">
+                    <img class="rounded-t-lg" src="assets/img/sertifikat-msib5-fathin.jpg"
+                        alt="Sertifikat MSIB5 Fathin" />
+                </a>
+                <div class="p-1">
+                    <a href="/assets/FATHIN ANHAR WICAKSONO - Sertifikat Penyelesaian SIB Batch 5 LearningX.pdf"
+                        target="_blank">
+                        <h5 class="mb-2 text-md font-bold tracking-tight text-gray-900 dark:text-white">MSIB 5
+                            participants at LearningX</h5>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="myanimation md:w-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:ms-2 md:me-2 mt-5">
+                <a href="/assets/Fathin Anhar Wicaksono - Sertifikasi Basic MSIB Batch 5.pdf" target="_blank">
+                    <img class="rounded-t-lg" src="assets/img/sertifikat-fullstack-web-basic-fathin.jpg"
+                        alt="Sertifikat full-stack web development bassic Fathin" />
+                </a>
+                <div class="p-1">
+                    <a href="/assets/Fathin Anhar Wicaksono - Sertifikasi Basic MSIB Batch 5.pdf" target="_blank">
+                        <h5 class="mb-2 text-md font-bold tracking-tight text-gray-900 dark:text-white">Full-Stack Web
+                            Development Basic at LearningX</h5>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="myanimation md:w-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:ms-2 md:me-2 mt-5">
+                <a href="/assets/Fathin Anhar Wicaksono - Sertifikasi Intermediate MSIB Batch 5.pdf" target="_blank">
+                    <img class="rounded-t-lg" src="assets/img/sertifikat-fullstack-web-intermediate-fathin.jpg"
+                        alt="Sertifikat full-stack web development inetrmediate Fathin" />
+                </a>
+                <div class="p-1">
+                    <a href="/assets/Fathin Anhar Wicaksono - Sertifikasi Intermediate MSIB Batch 5.pdf"
+                        target="_blank">
+                        <h5 class="mb-2 text-md font-bold tracking-tight text-gray-900 dark:text-white">Full-Stack Web
+                            Development Intermediate at LearningX</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-lg p-4 py-6 lg:py-8">
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                        href="https://faan.my.id/" class="hover:underline">FaanIsme</a>. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
 
+                    <a href="https://www.linkedin.com/in/fathin-anhar-wicaksono-9a0120221/" class="ms-5"><i
+                            class="fa-brands fa-linkedin" style="color: #0d47ab;"></i></a>
+                    <a href="mailto:faanisme@gmail.com" class="ms-5"><i class="fa-regular fa-envelope"
+                            style="color: #e64141;"></i></a>
+                    <a href="https://github.com/faan-isme" class="ms-5"><i class="fa-brands fa-github"
+                            style="color: #000000;"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
-
-
-<footer class="bg-white dark:bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-lg p-4 py-6 lg:py-8">
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://faan.my.id/"
-                    class="hover:underline">FaanIsme</a>. All Rights Reserved.
-            </span>
-            <div class="flex mt-4 sm:justify-center sm:mt-0">
-
-                <a href="https://www.linkedin.com/in/fathin-anhar-wicaksono-9a0120221/" class="ms-5"><i
-                        class="fa-brands fa-linkedin" style="color: #0d47ab;"></i></a>
-                <a href="mailto:faanisme@gmail.com" class="ms-5"><i class="fa-regular fa-envelope"
-                        style="color: #e64141;"></i></a>
-                <a href="https://github.com/faan-isme" class="ms-5"><i class="fa-brands fa-github"
-                        style="color: #000000;"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-
 
 </html>
