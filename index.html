@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portofolio Fathin Anhar Wicaksono, seorang programmer web berpengalaman dengan keahlian dalam pengembangan front-end dan back-end. 
+        Temukan proyek terbaru, keahlian teknis, dan solusi inovatif yang telah saya buat untuk berbagai klien. 
+        Hubungi saya untuk kolaborasi dan layanan pengembangan web berkualitas tinggi.">
     <meta property="og:title" content="Portofolio">
     <meta property="og:description" content="Portfolio Fathin Anhar">
     <meta property="og:image" content="assets/img/thumb.jpg">
@@ -30,8 +33,27 @@
                 }
             }
         }
-
         window.addEventListener("scroll", reveal);
+
+
+
+        function navbarlinksActive() {
+            var anchornav = document.querySelectorAll(".anchornav");
+            var scrollto = document.querySelectorAll(".scrollto");
+            for (var i = 0; i < anchornav.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = anchornav[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    scrollto[i].classList.add("activenav");
+                } else {
+                    scrollto[i].classList.remove("activenav");
+                }
+            }
+        }
+        window.addEventListener("load", navbarlinksActive);
+        window.addEventListener("scroll", navbarlinksActive);
 
         tailwind.config = {
             theme: {
@@ -51,12 +73,12 @@
                 },
             },
         }
+
     </script>
 </head>
 
 <body>
-    <nav
-        class="bg-white shadow-md shadow-black  fixed w-full z-20 top-0 start-0 border-b border-gray-200 ">
+    <nav class="bg-white shadow-md shadow-black  fixed w-full z-20 top-0 start-0 border-b border-gray-200 ">
         <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-2">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">Portofolio</span>
@@ -75,30 +97,29 @@
 
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
-
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
                     <li>
                         <a href="#about"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">About</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 scrollto">About</a>
                     </li>
                     <li>
                         <a href="#skill"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Skills</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 scrollto">Skills</a>
                     </li>
                     <li>
                         <a href="#project"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Projects</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 scrollto">Projects</a>
                     </li>
                     <li>
                         <a href="#certificate"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Certificate</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 scrollto">Certificate</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="bg-slate-300  text-black " id="about">
+    <section class="bg-slate-300  text-black anchornav " id="about">
         <div class="md:grid sm:mt-10 md:grid-cols-2 items-center gap-10 md:max-w-screen-lg mx-auto p-4 flex-wrap pb-0">
             <div class="lg:order-1 md:order-1 mt-10 md:mt-20 text-black ">
                 <div class="intro animate__animated animate__slideInLeft font-poppins font-normal">
@@ -121,13 +142,13 @@
                 </div>
             </div>
             <div class="lg:order-2  md:order-2 animate__animated animate__slideInRight">
-                <img src="assets/img/faan-edge.png" alt="faan-img"
+                <img src="assets/img/faan-edge.webp" alt="faan-img"
                     class="w-full h-full lg:mt-0  md:mt-24 max-h-400px" />
             </div>
         </div>
     </section>
     <span id="skill"></span>
-    <section class="reveal">
+    <section class="reveal anchornav">
         <br><br><br>
         <div class="flex max-w-screen-lg mx-auto p-4 justify-center">
             <h1 class="font-semibold text-2xl ">SKILLS</h1>
@@ -191,7 +212,7 @@
     </section>
 
     <span id="project"></span>
-    <section class="reveal">
+    <section class="reveal anchornav">
         <br><br><br>
         <div class="flex max-w-screen-lg mx-auto p-4 justify-center">
             <h1 class="font-semibold text-2xl ">PROJECTS</h1>
@@ -245,8 +266,8 @@
                     <div
                         class="relative mx-auto border-gray-800  border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
                         <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white ">
-                            <img src="assets/img/chargepoint.png"
-                                class="h-[156px] md:h-[278px] w-full rounded-lg" alt="Cahrgepoint">
+                            <img src="assets/img/chargepoint.png" class="h-[156px] md:h-[278px] w-full rounded-lg"
+                                alt="Cahrgepoint">
                         </div>
                     </div>
                     <div
@@ -311,8 +332,8 @@
                     <div
                         class="relative mx-auto border-gray-800  border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
                         <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white ">
-                            <img src="assets/img/tokoNusantara.png"
-                                class=" h-[156px] md:h-[278px] w-full rounded-lg" alt="Toko Nusantara">
+                            <img src="assets/img/tokoNusantara.png" class=" h-[156px] md:h-[278px] w-full rounded-lg"
+                                alt="Toko Nusantara">
                         </div>
                     </div>
                     <div
@@ -329,7 +350,7 @@
         </div>
     </section>
     <span id="certificate"></span>
-    <section class="reveal">
+    <section class="reveal anchornav">
         <br><br><br>
         <div class="flex max-w-screen-lg mx-auto p-4 justify-center">
             <h1 class="font-semibold text-2xl ">CERTIFICATE</h1>
@@ -352,12 +373,14 @@
             </div>
             <div
                 class="myanimation md:w-[300px] bg-white border border-gray-200 rounded-lg shadow  md:ms-2 md:me-2 mt-5">
-                <a href="https://drive.google.com/file/d/1ibX_CK9bBGImHr4dTy05-m2c82_LhM2z/view?usp=sharing" target="_blank">
+                <a href="https://drive.google.com/file/d/1ibX_CK9bBGImHr4dTy05-m2c82_LhM2z/view?usp=sharing"
+                    target="_blank">
                     <img class="rounded-t-lg" src="assets/img/sertifikat-fullstack-web-basic-fathin.jpg"
                         alt="Sertifikat full-stack web development bassic Fathin" />
                 </a>
                 <div class="p-1">
-                    <a href="https://drive.google.com/file/d/1ibX_CK9bBGImHr4dTy05-m2c82_LhM2z/view?usp=sharing" target="_blank">
+                    <a href="https://drive.google.com/file/d/1ibX_CK9bBGImHr4dTy05-m2c82_LhM2z/view?usp=sharing"
+                        target="_blank">
                         <h5 class="mb-2 text-md font-bold tracking-tight text-gray-900 ">Full-Stack Web
                             Development Basic at LearningX</h5>
                     </a>
@@ -365,7 +388,8 @@
             </div>
             <div
                 class="myanimation md:w-[300px] bg-white border border-gray-200 rounded-lg shadow  md:ms-2 md:me-2 mt-5">
-                <a href="https://drive.google.com/file/d/1EiDIlSurRirJsTTginrF9gj18_I8h6BB/view?usp=sharing" target="_blank">
+                <a href="https://drive.google.com/file/d/1EiDIlSurRirJsTTginrF9gj18_I8h6BB/view?usp=sharing"
+                    target="_blank">
                     <img class="rounded-t-lg" src="assets/img/sertifikat-fullstack-web-intermediate-fathin.jpg"
                         alt="Sertifikat full-stack web development inetrmediate Fathin" />
                 </a>
@@ -383,8 +407,8 @@
         <div class="mx-auto w-full max-w-screen-lg p-4 py-6 lg:py-8">
             <hr class="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center ">© 2023 <a
-                        href="https://faan.my.id/" class="hover:underline">FaanIsme</a>. All Rights Reserved.
+                <span class="text-sm text-gray-500 sm:text-center ">© 2023 <a href="https://faan.my.id/"
+                        class="hover:underline">FaanIsme</a>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 sm:justify-center sm:mt-0">
 
